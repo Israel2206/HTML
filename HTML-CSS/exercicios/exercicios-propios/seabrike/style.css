@@ -1,0 +1,28 @@
+body{
+    background-image: linear-gradient(to right, black, white)
+}
+section#sobre{
+    h1{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    background-color: aqua;
+    border-radius: 10px;
+    width: 800px;
+    height: auto;
+}
+section#bici{
+    background-color: blueviolet;
+    border-radius: 10px;
+    width: 800px;
+}
+section#banana{
+     background-color: pink;
+     border-radius: 10px;
+     width: 400px;
+     img{
+        width: 380px;
+     }
+}
