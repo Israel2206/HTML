@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento como HTML5 -->
+<html lang="pt-br">
+<!-- Elemento raiz do documento, com atributo de idioma definido como português do Brasil -->
+<head>
+    <!-- Cabeçalho do documento - contém metadados e links para recursos externos -->
+    <title>Forms</title>
+    <!-- Título da página que aparece na aba do navegador -->
+</head>
+<body>
+    <!-- Corpo do documento - conteúdo visível da página -->
+    
+    <!-- Início do formulário -->
+    <form action="action_page.php" method="POST">
+        <!-- 
+            action: especifica para onde os dados do formulário serão enviados
+            method: define o método HTTP para envio dos dados (POST envia os dados no corpo da requisição)
+        -->
+        
+        <!-- Primeiro campo: Nome -->
+        <div>
+            <!-- Container genérico para agrupar elementos -->
+            <label for="fname">first name: </label>
+            <!-- Rótulo associado ao campo de entrada -->
+            <input type="text" id="fname" name="fname" placeholder="firt name" required>
+            <!-- 
+                Campo de entrada de texto:
+                type="text": define como campo de texto
+                id="fname": identificador único (usado pelo label)
+                name="fname": nome do campo quando enviado ao servidor
+                placeholder="firt name": texto de exemplo/dica
+                required: campo obrigatório
+            -->
+        </div>
+        
+        <br>
+        <!-- Quebra de linha (espaço entre elementos) -->
+        
+        <!-- Segundo campo: Sobrenome -->
+        <div>
+            <label for="lname">last name: </label>
+            <input type="text" id="lname" name="lname" placeholder="last name">
+            <!-- Similar ao campo anterior, mas sem o atributo required -->
+        </div>
+        
+        <br>
+        
+        <!-- Terceiro campo: Senha -->
+        <div>
+            <label for="pass">Password: </label>
+            <input type="password" id="pass" name="pass" maxlength="12" required>
+            <!-- 
+                type="password": oculta os caracteres digitados
+                maxlength="12": limita a 12 caracteres
+                required: campo obrigatório
+            -->
+        </div>
+        
+        <br>
+        
+        <!-- Quarto campo: Email -->
+        <div>
+            <label for="email">email: </label>
+            <input type="email" id="email" name="email" placeholder="email@gmail.com" required>
+            <!-- 
+                type="email": valida automaticamente o formato de email
+                required: campo obrigatório
+            -->
+        </div>
+        
+        <br>
+        
+        <!-- Quinto campo: Data de nascimento -->
+        <div>
+            <label for="bdate">birthdate: </label>
+            <input type="date" id="bdate" name="bdate">
+            <!-- type="date": exibe um seletor de data em navegadores modernos -->
+        </div>
+        
+        <br>
+        
+        <!-- Sexto campo: Telefone -->
+        <div>
+            <label for="tel">tel: </label>
+            <input type="tel" id="tel" name="tel" placeholder="(XX) 0 1234-5678" required>
+            <!-- 
+                type="tel": otimizado para entrada de números de telefone
+                required: campo obrigatório
+            -->
+        </div>
+        
+        <br>
+        
+        <!-- Sétimo campo: Quantidade -->
+        <div>
+            <label for="quant">quantity: </label>
+            <input type="number" id="quant" name="quant" min="0" max="99" value="1">
+            <!-- 
+                type="number": permite apenas números
+                min="0", max="99": define valores mínimo e máximo
+                value="1": valor padrão
+            -->
+        </div>
+        
+        <br>
+        
+        <!-- Oitavo campo: Título (Sr./Sra.) -->
+        <div>
+            <label for="title">title: </label>
+            
+            <!-- Primeira opção de rádio -->
+            <label for="Sr.">Sr.</label>
+            <input type="radio" id="Sr." name="title" value="Sr.">   
+            
+            <!-- Segunda opção de rádio -->
+            <label>Sra.</label>
+            <input type="radio" name="title" value="Sra.">   
+            
+            <!-- Terceira opção de rádio -->
+            <label>noSr/Sra</label>
+            <input type="radio" name="title" value="noSr/Sra">                
+            <!-- 
+                type="radio": botões de opção onde apenas um pode ser selecionado
+                name="title": mesmo nome para todos agrupa as opções
+                value: valor que será enviado para cada opção selecionada
+            -->
+        </div>
+        
+        <br>
+        
+        <!-- Nono campo: Forma de pagamento -->
+        <div>
+            <label for="payment">payment: </label>
+            <select id="payment" name="payment">
+                <!-- Lista suspensa de opções -->
+                <option value="visa">visa</option>
+                <option value="mastercard">mastercard</option>
+                <option value="gift card">gift card</option>
+                <!-- 
+                    option: cada item da lista suspensa
+                    value: valor enviado ao servidor
+                    texto entre tags: texto exibido para o usuário
+                -->
+            </select>
+        </div>
+        
+        <br>
+        
+        <!-- Décimo campo: Checkbox de inscrição -->
+        <div>
+            <label for="subscribe">subscribe:</label>
+            <input type="checkbox" id="subcribe" name="subscribe">
+            <!-- 
+                type="checkbox": caixa de seleção que pode ser marcada/desmarcada
+                name: nome do campo quando enviado (valor padrão é "on" se marcado)
+            -->
+        </div>
+        
+        <br>
+        
+        <!-- Botão de reset -->
+        <div>
+            <input type="reset">
+            <!-- type="reset": limpa todos os campos do formulário -->
+        </div>
+        
+        <br>
+        
+        <!-- Botão de envio -->
+        <div>
+            <input type="submit">
+            <!-- type="submit": envia os dados do formulário para o action especificado -->
+        </div>
+    </form>
+    <!-- Fim do formulário -->
+</body>
+</html>
