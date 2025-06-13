@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(to right, black, white)
+    background-image: linear-gradient(to right, rgb(73, 66, 66), rgba(172, 154, 154, 0.767))
 }
 section#sobre{
     h1{
